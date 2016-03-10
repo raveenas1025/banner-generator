@@ -11,8 +11,17 @@
       $('h1').fadeIn(1500);
 
       $('button').click(function() {
-        var color = $('#color').val();
-        $('div').css('background', color);
+        var color1 = $('#color1').val();
+        var color2 = $('#color2').val();
+        var color3 = $('#color3').val();
+        $('div').css({background: '-webkit-linear-gradient(left, '+color1+','+color2+','+color3+')'});
+
+        
+        // $('div').css({ 'background': '-webkit-gradient(linear,left(color1),to(color2)});
+
+        // $('div').css({
+        //   background: 'linear-gradient'('to left', color1, color2, color3)
+        // });
       });
 
       $('span').hover(
@@ -45,6 +54,12 @@
           'height': '190px'
         });
       });
+
+// $('div').click(function() {
+//       $(":reset").css("background-color", "white");
+//         });
+
+   
 
 
 
@@ -87,11 +102,24 @@
 
     <h1><span>H</span><span>e</span><span>l</span><span>l</span><span>o</span><span>!</span></h1>
     <br>
-    <br> What is your favorite color?
-    <input id="color">
+    <br> What are your favorite colors?
+    <br>
+    <input id="color1">
+    <input id="color2">
+    <input id="color3">
     <button>Change color</button>
+
     <br>
     <br>
+
+
+
+
+
+
+
+
+
 
 
     <p>Are you a dog person or a cat person?</p>
@@ -104,6 +132,7 @@
     <h2>Goodbye</h2>
     <button id="bigger">50px?</button>
     <button id="smaller">30px?</button>
+      <!--<input type="reset" value="Reset">-->
   </div>
 </body>
 

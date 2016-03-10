@@ -14,23 +14,47 @@
         var color = $('#color').val();
         $('div').css('background', color);
       });
-      
-$('span').hover(
-  function(){
-    $(this).css('font-size','90px');
-  },
-  function(){
-    $(this).css('font-size','70px');
-  }
-  );
+
+      $('span').hover(
+        function() {
+          $(this).css('font-size', '90px');
+        },
+        function() {
+          $(this).css('font-size', '70px');
+        }
+      );
+
+      $('#bigger').click(function() {
+        $('h2').css('font-size', "50px");
+      });
+      $('#smaller').click(function() {
+        $('h2').css('font-size', '30px');
+      });
+
+      $('#dogs').click(function() {
+        $('#cat').fadeOut(1500);
+        $('#pilotdog').css({
+          'width': '200px',
+          'height': '200px'
+        });
+      });
+      $('#cats').click(function() {
+        $('#pilotdog').fadeOut(1500);
+        $('#cat').css({
+          'width': '230px',
+          'height': '190px'
+        });
+      });
+
+
 
     });
   </script>
   <style>
     div {
       color: white;
-      width: 1000px;
-      height:500px;
+      width: 60%;
+      height: 100%;
       padding: 40px;
       margin: 100px 0;
       background: linear-gradient(to left, #FF90C7, #AE78E8, #84A8FF);
@@ -40,19 +64,46 @@ $('span').hover(
       font-size: 70px;
       text-align: center;
     }
+    
+    h2 {
+      font-size: 40px;
+    }
+    
+    #pilotdog {
+      width: 150px;
+      height: 150px;
+    }
+    
+    #cat {
+      width: 180px;
+      height: 140px;
+    }
   </style>
 </head>
 
 <body>
   <div>
+
+
     <h1><span>H</span><span>e</span><span>l</span><span>l</span><span>o</span><span>!</span></h1>
     <br>
-    <br>
-    <br>
-    What is your favorite color?
+    <br> What is your favorite color?
     <input id="color">
     <button>Change color</button>
     <br>
+    <br>
+
+
+    <p>Are you a dog person or a cat person?</p>
+    <br>
+    <input type='radio' id='dogs'><img src="pilot-dog.png" id="pilotdog">
+    <br>
+    <input type="radio" id='cats'> <img src="cat.png" id="cat">
+
+
+    <h2>Goodbye</h2>
+    <button id="bigger">50px?</button>
+    <button id="smaller">30px?</button>
   </div>
 </body>
 

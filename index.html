@@ -14,14 +14,9 @@
         var color1 = $('#color1').val();
         var color2 = $('#color2').val();
         var color3 = $('#color3').val();
-        $('div').css({background: '-webkit-linear-gradient(left, '+color1+','+color2+','+color3+')'});
-
-        
-        // $('div').css({ 'background': '-webkit-gradient(linear,left(color1),to(color2)});
-
-        // $('div').css({
-        //   background: 'linear-gradient'('to left', color1, color2, color3)
-        // });
+        $('div').css({
+          background: '-webkit-linear-gradient(left, ' + color1 + ',' + color2 + ',' + color3 + ')'
+        });
       });
 
       $('span').hover(
@@ -47,6 +42,7 @@
           'height': '200px'
         });
       });
+
       $('#cats').click(function() {
         $('#pilotdog').fadeOut(1500);
         $('#cat').css({
@@ -55,21 +51,16 @@
         });
       });
 
-// $('div').click(function() {
-//       $(":reset").css("background-color", "white");
-//         });
-
-   
-
-
-
+      $('#reset').click(function() {
+            location.reload();
+              });
     });
   </script>
   <style>
     div {
       color: white;
-      width: 60%;
-      height: 100%;
+      width: 30%;
+      /*height: 100%;*/
       padding: 40px;
       margin: 100px 0;
       background: linear-gradient(to left, #FF90C7, #AE78E8, #84A8FF);
@@ -108,19 +99,8 @@
     <input id="color2">
     <input id="color3">
     <button>Change color</button>
-
     <br>
     <br>
-
-
-
-
-
-
-
-
-
-
 
     <p>Are you a dog person or a cat person?</p>
     <br>
@@ -132,7 +112,8 @@
     <h2>Goodbye</h2>
     <button id="bigger">50px?</button>
     <button id="smaller">30px?</button>
-      <!--<input type="reset" value="Reset">-->
+    <button id="reset"><input type="reset" value="Reset"></button>
+    
   </div>
 </body>
 

@@ -9,15 +9,16 @@
     $(function() {
       $('h1').fadeOut(1500);
       $('h1').fadeIn(1500);
+      //fades the title "hello" out and then back in once
 
       $('button').click(function() {
-        var color1 = $('#color1').val();
+        var color1 = $('#color1').val(); //the three colors the user plugs in
         var color2 = $('#color2').val();
         var color3 = $('#color3').val();
         $('div').css({
           background: '-webkit-linear-gradient(left, ' + color1 + ',' + color2 + ',' + color3 + ')'
         });
-      });
+      }); //when user plugs in 3 colors, the banner changes into a linea gradient using those colors.
 
       $('span').hover(
         function() {
@@ -26,14 +27,7 @@
         function() {
           $(this).css('font-size', '70px');
         }
-      );
-
-      // $('#bigger').click(function() {
-      //   $('h2').css('font-size', "50px");
-      // });
-      // $('#smaller').click(function() {
-      //   $('h2').css('font-size', '30px');
-      // });
+      ); //when the mouse is hovering over the title "hello" each individiual letter will get larger,when mouse leaves each letter, they will return back to original font-size
 
       $('#dogs').click(function() {
         $('#cat').fadeOut(1500);
@@ -41,7 +35,7 @@
           'width': '300px',
           'height': '260px'
         });
-      });
+      }); //when user selects the dog img, then the dog img will get larger and the cat img will disappear
 
       $('#cats').click(function() {
         $('#pilotdog').fadeOut(1500);
@@ -49,17 +43,17 @@
           'width': '280px',
           'height': '250px'
         });
-      });
-      
-        $("#click").click(function(){
+      }); //when user selects the cat img, then the cat img will get larger and the dog img will disappear
+
+      $("#click").click(function() {
         $("#goodbye").html("cool.");
-    });
-      
-      
+      }); //when user clicks on the "useless" button at the end, then the "goodbye" text will change to "cool."
 
       $('#reset').click(function() {
-            location.reload();
-              });
+        location.reload();
+      }); //when user clicks on the reset button, all that was entered will disappear and it will go back to its original form.
+
+
     });
   </script>
   <style>
@@ -77,10 +71,6 @@
       text-align: center;
     }
     
-    h2 {
-      font-size: 40px;
-    }
-    
     #pilotdog {
       width: 150px;
       height: 150px;
@@ -90,16 +80,15 @@
       width: 180px;
       height: 140px;
     }
-    p{
-      font-size:20px;
+    
+    p {
+      font-size: 20px;
     }
   </style>
 </head>
 
 <body>
   <div>
-
-
     <h1><span>H</span><span>e</span><span>l</span><span>l</span><span>o</span><span>!</span></h1>
     <br>
     <br> What are your favorite colors?
@@ -118,17 +107,13 @@
     <input type="radio" id='cats'> <img src="cat.png" id="cat">
 
 
-    <!--<h2>Goodbye</h2>-->
-    <!--<button id="bigger">50px?</button>-->
-    <!--<button id="smaller">30px?</button>-->
-    
     <p id="goodbye">Goodbye</p>
     <button id="click">Click me for no reason</button>
-    
-    <br><br>
-    
-     <input type="reset" value="Reset" id="reset">
-    
+    <br>
+    <br>
+
+    <input type="reset" value="Reset" id="reset">
+
   </div>
 </body>
 
